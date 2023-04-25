@@ -74,21 +74,17 @@ const names = [
   'Parker',
 ];
 
-const comments = [
-  'Decision Trackers are awesome',
-  'Find My Phone is a useful app',
-  'Learn Piano is not very good for learning Piano',
-  'Starbase Defender is a great game, I love it',
-  'Tower Defense is okay',
-  'Monopoly Money is better than real money IMO',
-  'Movie trailers are just the best parts of a movie distilled into 90 seconds',
-  'Hello world, this is a comment',
-  'Social media is a big waste of time',
-  'Notes is my most used app',
-  'Messages is open on my computer 24/7',
-  'Email is open on my computer',
-  'Compass is never opened',
-  'Firefox is great for privacy',
+const thoughts = [
+  'Social Network API is awesome',
+  'Machine Learning is fascinating',
+  'Node.js is a great backend framework',
+  'GraphQL vs REST, which is better?',
+  'I love using Express.js for my API development',
+  'NoSQL databases provide flexibility and scalability',
+  'MERN Stack is an excellent choice for full-stack development',
+  'Deploying applications on cloud is convenient and efficient',
+  'JavaScript is a versatile language',
+  'Frontend frameworks make web development easier',
 ];
 
 const lorum = [
@@ -125,12 +121,12 @@ const genRandomIndex = (arr) => Math.floor(Math.random() * arr.length);
 
 const getRandomWord = () => `${lorum[genRandomIndex(lorum)]}`;
 
-const getRandomPost = (words) => {
-  let post = '';
+const getRandomThoughtText = (words) => {
+  let thoughtText = '';
   for (let i = 0; i < words; i++) {
-    post += ` ${getRandomWord()}`;
+    thoughtText += ` ${getRandomWord()}`;
   }
-  return post;
+  return thoughtText;
 };
 
 // Get a random item given an array
@@ -140,22 +136,26 @@ const getRandomArrItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
 const getRandomName = () =>
   `${getRandomArrItem(names)} ${getRandomArrItem(names)}`;
 
-// Function to generate random comments given a number (ex. 10 comments === getRandomComments(10))
-const getRandomComments = (int) => {
+// Function to generate random thoughts given a number (ex. 10 thoughts === getRandomThoughts(10))
+const getRandomThoughts = (int) => {
   const results = [];
   for (let i = 0; i < int; i++) {
     results.push({
-      text: getRandomArrItem(comments),
+      text: getRandomArrItem(thoughts),
       username: getRandomName().split(' ')[0],
     });
   }
   return results;
 };
 
+// Function to generate random username
+const getRandomUser = () => getRandomName().split(' ')[0];
+
 // Export the functions for use in seed.js
 module.exports = {
   getRandomName,
-  getRandomComments,
-  getRandomPost,
+  getRandomThoughts,
+  getRandomThoughtText,
   genRandomIndex,
+  getRandomUser,
 };
