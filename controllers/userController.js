@@ -13,12 +13,16 @@ module.exports = {
     User.findOne({ _id: req.params.userId })
       .populate('thoughts')
       .populate('friends')
-      .then((user) =>
-        !user
-          ? res.status(404).json({ message: 'No user found with that id' })
-          : res.json(user)
-      )
-      .catch((err) => res.status(500).json(err));
+      .then((user) => {
+        if (!user) {
+          return res.status(404).json({ message: 'No user found with that id' });
+        }
+        return res.json(user);
+      })
+      .catch((err) => {
+        console.error("Error in getUser:", err);
+        res.status(500).json(err);
+      });
   },
 
   // POST a new user
@@ -30,20 +34,34 @@ module.exports = {
       });
   },
 
-  // UPDATE a new user
+  // UPDATE a user
   updateUser(req, res) {
     User.findOneAndUpdate(
       { _id: req.params.userId },
       { $set: req.body },
       { new: true }
     )
-      .then((user) =>
-        !user
-          ? res.status(404).json({ message: 'No user with that ID' })
-          : res.json({ message: 'User updated! 🎉' })
-      )
+      .then((user) => {
+        if (!user) {
+          return res.status(404).json({ message: 'No user with that ID' });
+        }
+        // Fetch the updated user with populated data
+        User.findOne({ _id: req.params.userId })
+          .populate('thoughts')
+          .populate('friends')
+          .then((updatedUser) => {
+            if (!updatedUser) {
+              return res.status(404).json({ message: 'No updated user found with that ID' });
+            }
+            res.json(updatedUser);
+          })
+          .catch((err) => {
+            console.error("Error in fetching updated user:", err);
+            res.status(500).json(err);
+          });
+      })
       .catch((err) => {
-        console.error(err);
+        console.error("Error in updateUser:", err);
         res.status(500).json(err);
       });
   },
@@ -99,7 +117,7 @@ module.exports = {
       .then((user) =>
         !user
           ? res.status(404).json({ message: 'No user found with that ID' })
-          : res.json({ message: 'Friend deleted' })
+          : res.json(user)
       )
       .catch((err) => res.status(500).json(err));
   }
