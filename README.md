@@ -2,7 +2,7 @@
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) The application is covered under the [MIT License](https://opensource.org/licenses/MIT).
 ## Description
-My motivation was to create a scalable and efficient social network API that can handle large amounts of unstructured data. I built this project to provide a robust foundation for social networking platforms, catering to their data-driven requirements. This project solves the challenge of managing large volumes of unstructure data while ensuring fast and flexible options in a social network application. I learned how to build a full-fledged API using Express.js, MongoDB, and Mongoose, while also implementing various CRUD operations and handling complex relationships between different data models.
+My motivation was to create a scalable and efficient social network API that can handle large amounts of unstructured data. I built this project to provide a robust foundation for social networking platforms, catering to their data-driven requirements. This project solves the challenge of managing large volumes of unstructured data while ensuring fast and flexible options in a social network application. I learned how to build a full-fledged API using Express.js, MongoDB, and Mongoose, while also implementing various CRUD operations and handling complex relationships between different data models.
 ## Table of Contents:
 1. [Installation](#installation)
 2. [Usage](#usage)
