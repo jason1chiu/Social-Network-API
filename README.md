@@ -15,9 +15,9 @@ My motivation was to create a scalable and efficient social network API that can
 ## Installation
 1. Ensure that you have [Node.js](https://nodejs.org/en) and [MongoDB](https://www.mongodb.com) installed on your local machine.
 2. Clone or download the project repository from GitHub using HTTPS or SSH into a folder of your choice
-3. In the project directory, run npm install to install all required dependencies.
+3. In the project directory, run "npm install" to install all required dependencies.
 4. Start the MongoDB server by running mongod or mongo depending on your system.
-5. Launch the application by running npm start or node server.js from the project directory.
+5. Launch the application by running "npm start" or "node server.js" from the project directory.
 6. Use a REST API client like [Insomnia](https://insomnia.rest), or [Postman](https://www.postman.com) to interact with the API endpoints.
 
 
@@ -28,7 +28,9 @@ To explore the full list of available endpoints and CRUD operations, please refe
 ### Collaborators
 None
 ### Third-Party
-[node.js](https://nodejs.org/en). [Insomnia](https://insomnia.rest). [Mongoose](https://www.mongodb.com).
+1. [node.js](https://nodejs.org/en)
+2. [Insomnia](https://insomnia.rest)
+3. [Mongoose](https://www.mongodb.com)
 ### Tutorials
 None
 
