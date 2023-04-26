@@ -28,7 +28,7 @@ To explore the full list of available endpoints and CRUD operations, please refe
 ### Collaborators
 None
 ### Third-Party
-1. [node.js](https://nodejs.org/en)
+1. [Node.js](https://nodejs.org/en)
 2. [Insomnia](https://insomnia.rest)
 3. [Mongoose](https://www.mongodb.com)
 ### Tutorials
