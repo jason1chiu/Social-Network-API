@@ -13,15 +13,16 @@ My motivation was to create a scalable and efficient social network API that can
 7. [Questions](#questions)
 
 ## Installation
-1. Go to this [GitHub Repo](https://github.com/jason1chiu/Social-Network-API)
-2. Git clone this repo using HTTPS or SSH into a folder of your choice
-3. Install [node.js](https://nodejs.org/en)
-4. Enter "npm i" in the command-line application to install the necessary node modules
-5. Install [Insomnia](https://insomnia.rest) or [Postman](https://www.postman.com)
+1. Ensure that you have [Node.js](https://nodejs.org/en) and [MongoDB](https://www.mongodb.com) installed on your local machine.
+2. Clone or download the project repository from GitHub using HTTPS or SSH into a folder of your choice
+3. In the project directory, run npm install to install all required dependencies.
+4. Start the MongoDB server by running mongod or mongo depending on your system.
+5. Launch the application by running npm start or node server.js from the project directory.
+6. Use a REST API client like [Insomnia](https://insomnia.rest), or [Postman](https://www.postman.com) to interact with the API endpoints.
 
 
 ## Usage
-After installation, execute "npm start" or "node server.js" in your terminal to perform various API operations. To explore the full list of available endpoints and CRUD operations, please refer to the video walkthrough provided in the [Test](#test) section. The API operations include GET, POST, PUT, and DELETE requests. Ensure that you replace the respective IDs for users, thoughts, friends and reactions accurately when performing specific actions, such as retrieving a single user, or adding a friend to another user. The video demonstration showcases both successful and unsuccessful requests, as well as the correct format for the JSON payload required for certain requests. Be cautious of extra spaces in the JSON payload, as they may lead to errors; always double-check your payload to prevent such issues.
+To explore the full list of available endpoints and CRUD operations, please refer to the video walkthrough provided in the [Test](#test) section. The API operations include GET, POST, PUT, and DELETE requests. Ensure that you replace the respective IDs for users, thoughts, friends and reactions accurately when performing specific actions, such as retrieving a single user, or adding a friend to another user. The video demonstration showcases both successful and unsuccessful requests, as well as the correct format for the JSON payload required for certain requests. Be cautious of extra spaces in the JSON payload, as they may lead to errors; always double-check your payload to prevent such issues.
 
 ## Credits
 ### Collaborators
